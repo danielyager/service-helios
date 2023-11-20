@@ -11,11 +11,9 @@ This microservice uses Python 3 and the Flask framework at its core. Prerequisit
 3. Use the command `EXPORT FLASK_ENV=development` to set the environment to development and allow for debugging mode.
 4. Now you can run the app with the command `flask run`
 
-***NOTE:*** If you're having trouble setting the flask environment variables as described above, you can use the Windows instructions below to run the project locally and it should still work ok.
 
 ### Windows
-I'm still figuring out how to do this elegantly on Windows but the below method works for now:
-
 1. Open up the project and go to the project's root directory ("helios_flask_app").
-2. Run the command `flask --app helios-app run` to run the flask app locally.
-    * This will run the app locally but not in Debug mode.
+2. Use the command `$env:FLASK_APP="helios_app"` to set the root app directory environment variable.
+3. Use the command `$env:FLASK_ENV="development"` to set the environment to development and allow for debugging mode.
+4. Now you can run the app with the command `flask run`

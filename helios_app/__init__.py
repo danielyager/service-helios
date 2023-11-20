@@ -1,21 +1,16 @@
 from flask import Flask
-
 from config import Config
+from helios_app.extensions import db
 
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
     # Initialize flask extensions here
+    db.init_app(app)
 
     # Register blueprints here
-
-    @app.route('/')
-    def index_test():
-        return '<h1>Testing the home page!</h1>'
-
-    @app.route('/hello-test/')
-    def hello_world_test():
-        return '<h1>Hello, World!</h1>'
+    from helios_app.routes import bp as testing_bp
+    app.register_blueprint(testing_bp)
     
     return app
