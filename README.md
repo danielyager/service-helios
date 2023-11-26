@@ -9,11 +9,13 @@ This microservice uses Python 3 and the Flask framework at its core. Prerequisit
 1. Open up the project and go to the project's root directory ("helios_flask_app").
 2. Use the command `EXPORT FLASK_APP=helios-app` to set the root app directory environment variable.
 3. Use the command `EXPORT FLASK_ENV=development` to set the environment to development and allow for debugging mode.
-4. Now you can run the app with the command `flask run`
+4. Use the command `EXPORT DATABASE_URI=`*DATABASE_URI_VALUE*  where *DATABASE_URI_VALUE* is listed in the Google Drive for you to use.
+5. Now you can run the app with the command `flask run`
 
 
 ### Windows
 1. Open up the project and go to the project's root directory ("helios_flask_app").
 2. Use the command `$env:FLASK_APP="helios_app"` to set the root app directory environment variable.
 3. Use the command `$env:FLASK_ENV="development"` to set the environment to development and allow for debugging mode.
-4. Now you can run the app with the command `flask run`
+4. Use the command `$env:DATABASE_URI=`*DATABASE_URI_VALUE*  where *DATABASE_URI_VALUE* is listed in the Google Drive for you to use.
+5. Now you can run the app with the command `flask run`

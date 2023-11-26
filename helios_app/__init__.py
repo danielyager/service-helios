@@ -10,7 +10,10 @@ def create_app(config_class=Config):
     db.init_app(app)
 
     # Register blueprints here
-    from helios_app.routes import bp as testing_bp
+    from helios_app.routes import bpTest as testing_bp
     app.register_blueprint(testing_bp)
+
+    from helios_app.routes import bpAccount as account_bp
+    app.register_blueprint(account_bp, url_prefix='/account')
     
     return app
